@@ -11,6 +11,9 @@ First set up an alias for the command:
 Search by keyword
     isbndbtool -k YOUR_API_KEY -q KEYWORD
     
+Search by keyword in index
+    isbndbtool -k YOUR_API_KEY -q KEYWORD -i INDEX
+    
 ### Some interesting usage examples:
 
 Show all info about book 'prince of thorns'
