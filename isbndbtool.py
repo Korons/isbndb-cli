@@ -6,10 +6,12 @@ import json
 parser = argparse.ArgumentParser(description='Get metadata for a book')
 
 parser.add_argument("-k", help="Your isbndb apikey")
-parser.add_argument("-t", help="Book title")
+parser.add_argument("-t", help="Book title or isbndb book_id")
 parser.add_argument("-r", help="raw XML/JSON/YAML", choices=['JSON','XML','YAML'])
 parser.add_argument("-c", help="Collections type", choices=['book','books','author','authors'])
 parser.add_argument("-q", help="Keyword to search")
+parser.add_argument("-i", help="Index to search", choices=['author_id' , 'author_name','publisher_id'
+	,'publisher_name','book_summary','book_notes','dewey','lcc','combined','full'])
 
 args = parser.parse_args()
 
