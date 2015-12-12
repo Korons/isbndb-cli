@@ -7,7 +7,10 @@ Search book metadata from isbndb.com
 First set up an alias for the command:
 
     alias isbndb="python /path/to/isbndbtool.py"
-
+    
+Search by keyword
+    isbndbtool -k YOUR_API_KEY -q KEYWORD
+    
 ### Some interesting usage examples:
 
 Show all info about book 'prince of thorns'
