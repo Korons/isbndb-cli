@@ -17,17 +17,17 @@ params = {}
 keys = ['q']
 
 
+if args.q:
+	for k in keys:
+  		if args.__getattribute__(k): params[k] = args.__getattribute__(k)
 
-for k in keys:
-  if args.__getattribute__(k): params[k] = args.__getattribute__(k)
+	if len(params) == 0:
+  		parser.print_usage()
+  		sys.exit()
 
-if len(params) == 0:
-  parser.print_usage()
-  sys.exit()
-
-apicall = urllib.urlopen('http://isbndb.com/api/v2/json/' + args.k + '/books?%s' % urllib.urlencode(params))
-result = apicall.read()
-apicall.close()
+	apicall = urllib.urlopen('http://isbndb.com/api/v2/json/' + args.k + '/books?%s' % urllib.urlencode(params))
+	result = apicall.read()
+	apicall.close()
 
 if args.t:
 
