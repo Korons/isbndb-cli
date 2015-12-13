@@ -9,9 +9,11 @@ First set up an alias for the command:
     alias isbndb="python /path/to/isbndbtool.py"
     
 Search by keyword
+    
     isbndbtool -k YOUR_API_KEY -q KEYWORD
     
 Search by keyword in index
+    
     isbndbtool -k YOUR_API_KEY -q KEYWORD -i INDEX
     
 ### Some interesting usage examples:
